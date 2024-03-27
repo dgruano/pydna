@@ -279,6 +279,7 @@ primer_f,primer_r = parse_primers(''' >760_KlLAC12_rv (20-mer)
                                         >759_KlLAC12_fw (19-mer)
                                         aaatggcagatcattcgag ''')
 
+<<<<<<< HEAD
 from pydna.amplify import pcr
 pcr_prod = pcr(primer_f,primer_r, gene)
 vector = gb.nucleotide("AJ001614") # pCAPs cloning vector
@@ -290,6 +291,112 @@ rec_vec =  ( lin_vector + pcr_prod ).looped()
 ## Installation 📦
 
 By default, pydna is installed with minimal dependencies, but there are optional dependencies for additional functionality.
+=======
+Another use case for pydna in the automatic generation of [sub cloning](http://en.wikipedia.org/wiki/Subcloning) examples for teaching purposes. These examples
+
+Feedback & suggestions are very welcome! Please post a message in the [google group](https://groups.google.com/d/forum/pydna) for pydna if you need help or have problems, questions or comments :sos:.
+
+![----]( http://bit.ly/coloredline)
+
+
+## Who is using pydna?
+
+Taylor, L. J., & Strebel, K. (2017).
+Pyviko: an automated Python tool to design gene knockouts in complex viruses with overlapping genes.
+BMC Microbiology, 17(1), 12.
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28061810)
+
+
+Wang, Y., Xue, H., Pourcel, C., Du, Y., & Gautheret, D. (2021).
+2-kupl: mapping-free variant detection from DNA-seq data of matched samples.
+In Cold Spring Harbor Laboratory (p. 2021.01.17.427048). [DOI](https://doi.org/10.1101/2021.01.17.427048)
+[PubMed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8180056)
+
+
+[An Automated Protein Synthesis Pipeline with Transcriptic and Snakemake](http://blog.booleanbiotech.com/transcriptic_protein_synthesis_pipeline.html)
+
+
+and other projects on [github](https://github.com/BjornFJohansson/pydna/network/dependents?package_id=UGFja2FnZS01MjQ2MjYzNQ%3D%3D)
+
+![----]( http://bit.ly/coloredline)
+
+There is an open access paper in BMC Bioinformatics describing pydna:
+
+[![abstr](https://raw.githubusercontent.com/bjornFJohansson/pydna/master/docs/pics/BMC_resized.png)](http://www.biomedcentral.com/1471-2105/16/142/abstract)
+
+Please reference the above paper:
+
+
+Pereira, F., Azevedo, F., Carvalho, Â., Ribeiro, G. F., Budde, M. W., & Johansson, B. (2015). Pydna: a simulation and documentation tool for DNA assembly strategies using python. BMC Bioinformatics, 16(142), 142.
+
+
+When using pydna.
+
+![----]( http://bit.ly/coloredline)
+
+## Documentation :page_with_curl:
+
+Documentation is built using [Sphinx](http://www.sphinx-doc.org/) from [docstrings](https://www.python.org/dev/peps/pep-0257/)
+in the code and displayed at readthedocs [![Documentation Status](https://readthedocs.org/projects/pydna/badge/?version=latest)](http://pydna.readthedocs.io/?badge=latest).
+The [numpy](www.numpy.org) [docstring format](https://github.com/numpy/numpy/blob/release/doc/HOWTO_DOCUMENT.rst.txt) is used.
+
+![----]( http://bit.ly/coloredline)
+
+## Installation using pip
+
+Pip is included in recent Python versions and is the
+officially [recommended](http://python-packaging-user-guide.readthedocs.org/en/latest) tool.
+
+Pip installs the minimal installation requirements automatically, but not the optional requirements (see below).
+The --pre switch to get the latest version of pydna.
+
+    pip install --pre --upgrade pydna
+
+
+for optional functionality do:
+
+    pip install --pre --upgrade pydna[clipboard,download,express,gel]
+
+Remove options inside the square brackets as required, but be sure not to leave spaces as pip will not recognize the options. See below under "Optional dependencies".
+
+### Windows:
+
+You should be able to pip install pydna from the Windows terminal as biopython now can be installed with pip as well.
+
+    C:\> pip install pydna
+
+By default python and pip are not on the PATH. You can re-install Python and select this option during installation, or give the full path for pip. Try something like this, depending on where your copy of Python is installed:
+
+    C:\Python37\Scripts\pip install pydna
+
+![----]( http://bit.ly/coloredline)
+
+## Source Code
+
+Pydna is developed on [Github](https://github.com/BjornFJohansson/pydna) :octocat:.
+I am happy to collaborate on new features or bugfixes.
+
+## Minimal installation dependencies
+
+The list below is the minimal requirements for installing pydna.
+Biopython and pydivsufsort has c-extensions, but the other modules are pure python.
+
+- [Python 3.8, 3.9, 3.10, 3.11 or 3.12](http://www.python.org)
+- [appdirs](https://pypi.python.org/pypi/appdirs)
+- [biopython](http://pypi.python.org/pypi/biopython)
+- [networkx](http://pypi.python.org/pypi/networkx)
+- [prettytable](https://pypi.python.org/pypi/PrettyTable)
+- [pydivsufsort](https://pypi.python.org/pypi/pydivsufsort)
+- [pyfiglet](https://pypi.python.org/pypi/pyfiglet)
+
+Pydna is importable even without pyfiglet.
+
+## Optional dependencies
+
+These can be installed `pip install pydna[clipboard,gel,download,express]`
+where `[clipboard,gel,download,express]` is the list of options available. Any
+combination of the words inside the square brackets are allowed, but no white space.
+>>>>>>> 78d4dad (removed git hook)
 
 <details>
 <summary>Click here to see optional dependencies</summary>
