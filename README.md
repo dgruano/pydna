@@ -3,9 +3,13 @@
 | [![Tests & Coverage](https://github.com/BjornFJohansson/pydna/actions/workflows/pydna_test_and_coverage_workflow.yml/badge.svg?branch=dev_bjorn)](https://github.com/BjornFJohansson/pydna/actions/workflows/pydna_test_and_coverage_workflow.yml) | [![codecov](https://codecov.io/gh/BjornFJohansson/pydna/branch/master/graph/badge.svg)](https://codecov.io/gh/BjornFJohansson/pydna/branch/master) | [![PyPI version](https://badge.fury.io/py/pydna.svg)](https://badge.fury.io/py/pydna)                                                  | [![Google group : pydna](https://img.shields.io/badge/Google%20Group-pydna-blue.svg)](https://groups.google.com/g/pydna)              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | [![Documentation Status](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml)                                                      | [![GitHub issues](https://img.shields.io/github/issues/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/issues)                | [![Anaconda-Server Badge2](https://anaconda.org/bjornfjohansson/pydna/badges/license.svg)](https://anaconda.org/bjornfjohansson/pydna) | [![GitHub stars](https://img.shields.io/github/stars/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/stargazers) |
 =======
 | [![Documentation Status](https://github.com/seguid/BjornFJohansson/pydna/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml)                                               | [![GitHub issues](https://img.shields.io/github/issues/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/issues)                | [![Anaconda-Server Badge2](https://anaconda.org/bjornfjohansson/pydna/badges/license.svg)](https://anaconda.org/bjornfjohansson/pydna) | [![GitHub stars](https://img.shields.io/github/stars/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/stargazers) |
+=======
+| [![Documentation Status](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml)                                                      | [![GitHub issues](https://img.shields.io/github/issues/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/issues)                | [![Anaconda-Server Badge2](https://anaconda.org/bjornfjohansson/pydna/badges/license.svg)](https://anaconda.org/bjornfjohansson/pydna) | [![GitHub stars](https://img.shields.io/github/stars/BjornFJohansson/pydna.svg)](https://github.com/BjornFJohansson/pydna/stargazers) |
+>>>>>>> 2653fb6 (fix readme links)
 
 >>>>>>> 3386436 (redirect docs badge to action)
 
@@ -18,6 +22,10 @@ state of documentation in the scientific literature :radioactive:.
 The pydna python package provide a human-readable formal descriptions of :dna: cloning and genetic assembly
 strategies in Python :snake: which allow for simulation and verification.
 Pydna can be used as [executable documentation](https://en.wikipedia.org/wiki/Literate_programming) for cloning.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2653fb6 (fix readme links)
 
 A cloning strategy expressed in pydna is **complete**, **unambiguous** and **stable**.
 
@@ -43,7 +51,11 @@ DNA molecule constructions.
 
 ## Acknowledgement 🤝
 
+<<<<<<< HEAD
 If you use pydna in your research, please reference the paper:
+=======
+Some simple examples can be found [here](https://github.com/MetabolicEngineeringGroupCBMA/pydna-examples#pydna-examples).
+>>>>>>> 2653fb6 (fix readme links)
 
 Pereira, F., Azevedo, F., Carvalho, Â., Ribeiro, G. F., Budde, M. W., & Johansson, B. (2015). Pydna: a simulation and documentation tool for DNA assembly strategies using python. BMC Bioinformatics, 16(142), 142. [doi:10.1186/s12859-015-0544-x](https://doi.org/10.1186/s12859-015-0544-x)
 
@@ -285,6 +297,7 @@ primer_f,primer_r = parse_primers(''' >760_KlLAC12_rv (20-mer)
                                         aaatggcagatcattcgag ''')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from pydna.amplify import pcr
 pcr_prod = pcr(primer_f,primer_r, gene)
 vector = gb.nucleotide("AJ001614") # pCAPs cloning vector
@@ -298,6 +311,9 @@ rec_vec =  ( lin_vector + pcr_prod ).looped()
 By default, pydna is installed with minimal dependencies, but there are optional dependencies for additional functionality.
 =======
 Another use case for pydna in the automatic generation of [sub cloning](http://en.wikipedia.org/wiki/Subcloning) examples for teaching purposes. These examples
+=======
+Another use case for pydna in the automatic generation of [sub cloning](http://en.wikipedia.org/wiki/Subcloning) examples for teaching purposes.
+>>>>>>> 2653fb6 (fix readme links)
 
 Feedback & suggestions are very welcome! Please post a message in the [google group](https://groups.google.com/d/forum/pydna) for pydna if you need help or have problems, questions or comments :sos:.
 
@@ -320,7 +336,6 @@ In Cold Spring Harbor Laboratory (p. 2021.01.17.427048). [DOI](https://doi.org/1
 
 [An Automated Protein Synthesis Pipeline with Transcriptic and Snakemake](http://blog.booleanbiotech.com/transcriptic_protein_synthesis_pipeline.html)
 
-
 and other projects on [github](https://github.com/BjornFJohansson/pydna/network/dependents?package_id=UGFja2FnZS01MjQ2MjYzNQ%3D%3D)
 
 ![----]( http://bit.ly/coloredline)
@@ -331,9 +346,7 @@ There is an open access paper in BMC Bioinformatics describing pydna:
 
 Please reference the above paper:
 
-
 Pereira, F., Azevedo, F., Carvalho, Â., Ribeiro, G. F., Budde, M. W., & Johansson, B. (2015). Pydna: a simulation and documentation tool for DNA assembly strategies using python. BMC Bioinformatics, 16(142), 142.
-
 
 When using pydna.
 
@@ -341,8 +354,8 @@ When using pydna.
 
 ## Documentation :page_with_curl:
 
-Documentation is built using [Sphinx](http://www.sphinx-doc.org/) from [docstrings](https://www.python.org/dev/peps/pep-0257/)
-in the code and displayed at readthedocs [![Documentation Status](https://readthedocs.org/projects/pydna/badge/?version=latest)](http://pydna.readthedocs.io/?badge=latest).
+Documentation can be found [here](https://bjornfjohansson.github.io/pydna). It is built using [Sphinx](http://www.sphinx-doc.org/) from [docstrings](https://www.python.org/dev/peps/pep-0257/)
+using a GitHub [action](https://github.com/BjornFJohansson/pydna/actions/workflows/publish-docs.yml).
 The [numpy](www.numpy.org) [docstring format](https://github.com/numpy/numpy/blob/release/doc/HOWTO_DOCUMENT.rst.txt) is used.
 
 ![----]( http://bit.ly/coloredline)
@@ -413,9 +426,15 @@ Enables the `pydna.dseqrecord.Dseqrecord.copy_gb_to_clipboard()` and `pydna.dseq
 These methods will put a copy the sequence on the clipboard in either Genbank (gb) or fasta format.
 
 
+<<<<<<< HEAD
 | Dependency                                          | Function in pydna          |
 | --------------------------------------------------- | -------------------------- |
 | [pyperclip](https://pypi.python.org/pypi/pyperclip) | copy sequence to clipboard |
+=======
+| Dependency                                          | Function in pydna                      |
+| --------------------------------------------------- | -------------------------------------- |
+| [pyperclip](https://pypi.python.org/pypi/pyperclip) | copy sequence to clipboard             |
+>>>>>>> 2653fb6 (fix readme links)
 
 ### `download`
 
