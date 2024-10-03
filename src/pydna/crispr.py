@@ -23,6 +23,15 @@ from pydna.dseqrecord import Dseqrecord
 
 class pam:
     """
+    This class is used to represent a Protospacer Adjacent Motif (PAM) sequence.
+    It takes a PAM sequence in string format as input and creates three main attributes:
+    - pam: the PAM sequence in uppercase.
+    - re: the PAM sequence converted to a regular expression.
+    - rcre: the reverse complement of the PAM sequence converted to a regular expression.
+
+    This can be used to simplify PAM usage in the CRISPR module.
+
+    Examples:
     >>> pam("NGG")
     '[ATGC]GG'
     >>> pam("NNGRRT")
@@ -52,9 +61,11 @@ class _cas(ABC):
     fst3 = 0
 
     def __init__(self, protospacer: str):
+        self.pamre = pam_to_re(self.pam)
+        self.pamrerc = pam_to_re(rc(self.pam))
         self.protospacer = protospacer.upper()
         self.compsite = re.compile(
-            f"(?=(?P<watson>{self.protospacer}{self.pam}))|(?=(?P<crick>{rc(self.pam)}{rc(self.protospacer)}))",
+            f"(?=(?P<watson>{self.protospacer}{self.pamre}))|(?=(?P<crick>{self.pamrerc}{rc(self.protospacer)}))",
             re.UNICODE,
         )
 
@@ -143,9 +154,10 @@ class SaCas9(_cas):
         ovhg (int): TODO: ?
     """
 
-    scaffold = "GTTTTAGAGCTAGAAATAGCAAGTTAAAATAAGG"
+    scaffold = "GTTTTAGAGCTAGAAATAGCAAGTTAAAATAAGG"  # TODO: Check the appropriate scaffold
     pam = "NNGRRT"
 
+    # TODO: Check sizes
     size = 21
     fst5 = 17
     fst3 = -3
